@@ -8,13 +8,11 @@ app.use(express.json());
 
 app.post("/api", (req, res) => {
   const { module, content } = req.body;
-  console.log("-----------------");
-  console.log(`module: ${module}`);
-  console.log(`content: ${content}`);
+  console.log("Receive");
 
   const startTime = Date.now();
 
-  const responseMessage = `testing 測試 testing 測試 testing 測試`;
+  const responseMessage = `testing 測試 testing 測試 testing 測試 使用 ${module} 模型`;
 
   const executionTime = `${Date.now() - startTime}ms`;
 
